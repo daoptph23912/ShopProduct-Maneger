@@ -135,21 +135,28 @@ const Main = (props) => {
           <Swiper style={styles.wrapper} autoplay>
             <View style={styles.slide}>
               <Image
-                source={require("../imgs/banner.png")}
+                source={require("../../image_shopmobie/banner/banner2.jpg")}
                 style={styles.image}
                 resizeMode="cover"
               />
             </View>
             <View style={styles.slide}>
               <Image
-                source={require("../Screen/image/bannerr.jpg")}
+                source={require("../../image_shopmobie/banner/banner1.jpg")}
                 style={styles.image}
                 resizeMode="cover"
               />
             </View>
             <View style={styles.slide}>
               <Image
-                source={require("../Screen/image/banner4.png")}
+                source={require("../../image_shopmobie/banner/banner3.jpg")}
+                style={styles.image}
+                resizeMode="cover"
+              />
+            </View>
+            <View style={styles.slide}>
+              <Image
+                source={require("../../image_shopmobie/banner/banner4.jpg")}
                 style={styles.image}
                 resizeMode="cover"
               />

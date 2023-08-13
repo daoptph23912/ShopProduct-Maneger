@@ -22,7 +22,7 @@ import axios from "axios";
 
 const Login = () => {
   const navigation = useNavigation();
-  const [email, setEmail] = useState("Nva@gmail.com");
+  const [email, setEmail] = useState("Thanhdaodd@gmail.com");
   const [password, setPassWord] = useState("123456");
   const [err, setErr] = useState(false);
   const info = useSelector((state) => state.Reducers.arrUser);
