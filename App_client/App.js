@@ -10,14 +10,14 @@ import { store } from "./src/redux/store";
 
 export default function App() {
   return (
-    <View>
-      <Text>xasxsxsxs</Text>
-    </View>
-    // <Provider store={store}>
-    //   <NavigationContainer>
-    //     <AuthStack />
-    //   </NavigationContainer>
-    // </Provider>
+    // <View>
+    //   <Text>xasxsxsxs</Text>
+    // </View>
+    <Provider store={store}>
+      <NavigationContainer>
+        <AuthStack />
+      </NavigationContainer>
+    </Provider>
   );
 }
 
