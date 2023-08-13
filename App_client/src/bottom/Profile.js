@@ -18,10 +18,10 @@ import {
 } from "react-native-paper";
 import { React, useEffect, useState } from "react";
 import { useNavigation, useIsFocused } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+// import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useDispatch, useSelector } from "react-redux";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import editProfile from "../edit/EditProfile";
+// import editProfile from "../edit/EditProfile";
 import axios from "axios";
 import Header from "../common/Header";
 

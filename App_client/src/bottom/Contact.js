@@ -14,7 +14,7 @@ const Contact = () => {
       <Header title={"Contact"} />
       <View>
         <Image
-          source={require("../Screen/image/shop.jpg")}
+          source={require("../../image_shopmobie/banner/banner1.jpg")}
           style={{
             width: "94%",
             height: 200,

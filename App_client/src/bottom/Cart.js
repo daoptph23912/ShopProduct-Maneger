@@ -10,7 +10,7 @@ import {
 import React, { useState, useEffect } from "react";
 import CartItem from "../common/CartItem";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFormCart } from "../redux/action/Actions";
+// import { removeFormCart } from "../redux/action/Actions";
 import Header from "../common/Header";
 import {
   GETCARTUSER,
