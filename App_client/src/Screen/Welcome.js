@@ -10,7 +10,7 @@ const Welcome = ({ navigation }) => {
       style={{
         flex: 1,
       }}
-      colors={[COLORS.secondary, COLORS.primary]}
+      colors={[COLORS.color5, COLORS.color4]}
     >
       <View style={{ flex: 1 }}>
         <View>
@@ -99,9 +99,9 @@ const Welcome = ({ navigation }) => {
               color: COLORS.white,
             }}
           >
-            Let's Go
+            Mobile Phone
           </Text>
-          <Text
+          {/* <Text
             style={{
               fontSize: 46,
               fontWeight: 800,
@@ -109,30 +109,30 @@ const Welcome = ({ navigation }) => {
             }}
           >
             Hello Everyone
-          </Text>
+          </Text> */}
 
           <View style={{ marginVertical: 22 }}>
             <Text
               style={{
-                fontSize: 16,
+                fontSize: 18,
                 color: COLORS.white,
                 marginVertical: 4,
               }}
             >
-              Connect with each other with chatting
+              Chào mừng các bạn đến với shop mobile
             </Text>
             <Text
               style={{
-                fontSize: 16,
+                fontSize: 18,
                 color: COLORS.white,
               }}
             >
-              Calling, Enjoy Safe and private texting
+              Phạm Thành Đạo
             </Text>
           </View>
 
           <Button
-            title="Join Now"
+            title="Đăng kí ngay"
             onPress={() => navigation.navigate("NewAccount")}
             style={{
               marginTop: 22,
@@ -153,7 +153,7 @@ const Welcome = ({ navigation }) => {
                 color: COLORS.white,
               }}
             >
-              Already have an account ?
+              Bạn thực sự có tài khoản ?
             </Text>
             <Pressable onPress={() => navigation.navigate("Login")}>
               <Text
@@ -164,7 +164,7 @@ const Welcome = ({ navigation }) => {
                   marginLeft: 4,
                 }}
               >
-                Login
+                Đăng nhập
               </Text>
             </Pressable>
           </View>

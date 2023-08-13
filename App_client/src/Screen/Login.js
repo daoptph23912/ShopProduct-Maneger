@@ -83,7 +83,22 @@ const Login = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.color4 }}>
+      <Image
+        source={require("./image/hero1.jpg")}
+        style={{
+          height: 100,
+          width: 100,
+          borderRadius: 20,
+          position: "absolute",
+          top: 10,
+          transform: [
+            { translateX: 20 },
+            { translateY: 20 },
+            { rotate: "-20deg" },
+          ],
+        }}
+      />
       <Image
         source={require("../Screen/image/anhdao.jpg")}
         style={{
@@ -101,6 +116,7 @@ const Login = () => {
           alignSelf: "center",
           fontSize: 24,
           fontWeight: 600,
+          color: COLORS.white,
         }}
       >
         Hi Welcome Back ! 👋 Login
@@ -131,7 +147,7 @@ const Login = () => {
         >
           {showPassWord1 ? (
             <Image
-              style={{ width: 25, height: 25 }}
+              style={{ width: 20, height: 20, marginTop: 4 }}
               source={require("../Screen/image/eye.png")}
             />
           ) : (
@@ -166,9 +182,10 @@ const Login = () => {
       )}
 
       <CustomButton
+        style={{}}
         title={"Login"}
-        bgColor={"#000"}
-        textColor={"#fff"}
+        bgColor={"#1996D1"}
+        textColor={"black"}
         onPress={() => {
           validate();
         }}
