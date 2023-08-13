@@ -1,0 +1,107 @@
+.upload-image{
+    padding: 4px;
+    text-align: center;
+    border: 1px solid #ada7a7;
+    border-radius: 7px;
+    background-color: #dbdada;
+    z-index: 10;
+    cursor: pointer;
+}
+.text_image{
+    font-weight: 500;
+    cursor: pointer;
+    i{
+        margin-left: 3px;
+        cursor: pointer;
+    }
+}
+.priview_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        max-width: 300px;
+        max-height: 150px;
+        margin-top: 12px;
+    }
+    
+}
+
+tr{
+    .image{
+        img{
+            width:150px  
+        }
+    }
+} 
+.flexNewEdit{
+    display: flex;
+}
+.tenSp{
+    width: 250px
+}
+@media screen and (max-width: 480px){
+    .manhinhdienthoai{
+        display: none;
+    }
+    .flexNewEdit{
+        display: block;
+    }
+    tr{
+        .image{
+            img{
+                width:100px  
+            }
+        }
+    }
+    .sale{
+        
+    }
+    .danhMuc{
+
+    }
+    .hangSX{
+
+    }
+    .gia{
+
+    }
+    .soLuong{
+
+    }
+    .luotXem{
+
+    }
+    
+}
+@media screen and (max-width: 768px){
+    .tablet{
+        display: none !important;;
+    }
+    tr{
+        .image{
+            img{
+                width:120px  
+            }
+        }
+    }
+    .flexNewEdit{
+        display: block;
+    }
+}
+@media screen and (max-width: 1024px){
+    .anh {
+        width: 120px;
+    }
+    .maytinh{
+        display: none !important;;
+    }
+    tr{
+        .image{
+            img{
+                width:120px  
+            }
+        }
+    }
+    
+}

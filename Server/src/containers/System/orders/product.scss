@@ -1,0 +1,28 @@
+.upload-image{
+    padding: 4px;
+    text-align: center;
+    border: 1px solid #ada7a7;
+    border-radius: 7px;
+    background-color: #dbdada;
+    z-index: 10;
+    cursor: pointer;
+}
+.text_image{
+    font-weight: 500;
+    cursor: pointer;
+    i{
+        margin-left: 3px;
+        cursor: pointer;
+    }
+}
+.priview_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        max-width: 300px;
+        max-height: 150px;
+        margin-top: 12px;
+    }
+    
+}
