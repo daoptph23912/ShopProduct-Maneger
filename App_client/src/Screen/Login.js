@@ -91,32 +91,18 @@ const Login = () => {
       colors={[COLORS.color5, COLORS.color4]}
     >
       <Image
-        source={require("./image/hero1.jpg")}
-        style={{
-          height: 100,
-          width: 100,
-          borderRadius: 20,
-          position: "absolute",
-          top: 10,
-          transform: [
-            { translateX: 20 },
-            { translateY: 20 },
-            { rotate: "-20deg" },
-          ],
-        }}
-      />
-      <Image
-        source={require("../Screen/image/anhdao.jpg")}
+        source={require("../Screen/image/mobile-shop.png")}
         style={{
           width: 130,
           height: 130,
           alignSelf: "center",
-          marginTop: 20,
+          marginTop: 50,
           borderRadius: 130,
+          marginBottom: 20,
         }}
       ></Image>
 
-      <Text
+      {/* <Text
         style={{
           marginTop: 50,
           alignSelf: "center",
@@ -126,7 +112,7 @@ const Login = () => {
         }}
       >
         Hi Welcome Back ! 👋 Login
-      </Text>
+      </Text> */}
       <CustomTextInput
         placeholder={"Xin Nhập Tài Email"}
         icon={require("../Screen/image/email.png")}
@@ -158,7 +144,7 @@ const Login = () => {
             />
           ) : (
             <Image
-              style={{ width: 25, height: 25 }}
+              style={{ width: 20, height: 20, marginTop: 4 }}
               source={require("../Screen/image/hidden.png")}
             />
           )}
