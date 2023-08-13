@@ -135,7 +135,8 @@ const Welcome = ({ navigation }) => {
             title="Đăng kí ngay"
             onPress={() => navigation.navigate("NewAccount")}
             style={{
-              marginTop: 22,
+              color: COLORS.color4,
+              marginTop: 10,
               width: "100%",
             }}
           />

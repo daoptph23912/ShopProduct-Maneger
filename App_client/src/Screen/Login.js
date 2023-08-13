@@ -4,6 +4,7 @@ import { TextInput, TouchableOpacity, SafeAreaView } from "react-native";
 import Button from "../components/Button";
 import Checkbox from "expo-checkbox";
 import COLORS from "../constants/colors";
+import { LinearGradient } from "expo-linear-gradient";
 import {
   Image,
   Text,
@@ -83,7 +84,12 @@ const Login = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.color4 }}>
+    <LinearGradient
+      style={{
+        flex: 1,
+      }}
+      colors={[COLORS.color5, COLORS.color4]}
+    >
       <Image
         source={require("./image/hero1.jpg")}
         style={{
@@ -184,7 +190,7 @@ const Login = () => {
       <CustomButton
         style={{}}
         title={"Login"}
-        bgColor={"#1996D1"}
+        bgColor={"white"}
         textColor={"black"}
         onPress={() => {
           validate();
@@ -276,7 +282,7 @@ const Login = () => {
           <Text>Google</Text>
         </TouchableOpacity>
       </View>
-    </SafeAreaView>
+    </LinearGradient>
   );
 };
 export default Login;

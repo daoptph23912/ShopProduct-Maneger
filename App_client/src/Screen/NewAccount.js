@@ -14,6 +14,8 @@ import CustomTextInput from "../common/CustomTextInput";
 import { RadioButton } from "react-native-paper";
 import { ADDMENBER } from "../../api";
 import axios from "axios";
+import COLORS from "../constants/colors";
+import { LinearGradient } from "expo-linear-gradient";
 
 const NewAccount = () => {
   const [showPassWord, setShowPass] = useState(true);
@@ -143,18 +145,29 @@ const NewAccount = () => {
       .catch((err) => console.log(err));
   };
   return (
-    <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
+    <LinearGradient
+      style={{
+        flex: 1,
+      }}
+      colors={[COLORS.color5, COLORS.color4]}
+      showsVerticalScrollIndicator={false}
+    >
       <View style={{ flex: 1 }}>
-        <Image
-          source={require("../Screen/image/vip.jpg")}
+        {/* <Image
+          source={require("./image/hero1.jpg")}
           style={{
-            width: 60,
-            height: 60,
-            alignSelf: "center",
-            marginTop: 50,
-            borderRadius: 70,
+            height: 100,
+            width: 100,
+            borderRadius: 20,
+            position: "absolute",
+            top: 10,
+            transform: [
+              { translateX: 20 },
+              { translateY: 20 },
+              { rotate: "-20deg" },
+            ],
           }}
-        ></Image>
+        /> */}
         <Text
           style={{
             marginTop: 50,
@@ -313,8 +326,8 @@ const NewAccount = () => {
 
         <CustomButton
           title={"Đăng kí"}
-          bgColor={"#000"}
-          textColor={"#fff"}
+          bgColor={"white"}
+          textColor={"black"}
           onPress={() => {
             dangKi();
           }}
@@ -336,7 +349,7 @@ const NewAccount = () => {
           Already Have Account
         </Text>
       </View>
-    </ScrollView>
+    </LinearGradient>
   );
 };
 const styles = StyleSheet.create({
