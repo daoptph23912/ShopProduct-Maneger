@@ -36,12 +36,7 @@ const Contact = () => {
               alignItems: "center",
             }}
           >
-            {/* <Image source={require('../Screen/image/shopping.png')} style={{ width: 24, height: 24 }}></Image>
-                        <Text style={{
-                            fontSize: 16,
-                            fontWeight: '400',
-                            marginLeft: 20
-                        }}>Shopping Fashion Men</Text> */}
+            s{" "}
           </View>
           <View
             style={{
@@ -82,7 +77,7 @@ const Contact = () => {
               letterSpacing: 1,
               opacity: 0.5,
               lineHeight: 20,
-              maxWidth: "85%",
+              maxWidth: "100%",
               maxHeight: 44,
               marginBottom: 0,
             }}
@@ -242,37 +237,64 @@ const Contact = () => {
           marginBottom: 100,
         }}
       >
-        <View style={{ flex: 1, flexDirection: "row" }}>
-          <Image
-            source={require("../Screen/image/fb.png")}
-            style={{ width: 50, height: 50 }}
-          ></Image>
-          <Text
+        <View style={{ flexDirection: "row", justifyContent: "center" }}>
+          <TouchableOpacity
+            onPress={() => console.log("Pressed")}
             style={{
-              color: "#fff",
-              marginLeft: 10,
-              fontSize: 15,
-              fontWeight: "600",
-              marginTop: 17,
+              flex: 1,
+              marginTop: 10,
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "row",
+              height: 52,
+              borderWidth: 1,
+              borderColor: COLORS.grey,
+              marginRight: 4,
+              borderRadius: 10,
+              marginLeft: 30,
             }}
           >
-            Fashion Men
-          </Text>
-          <Image
-            source={require("../Screen/image/instagram.png")}
-            style={{ width: 50, height: 50, marginLeft: 40 }}
-          ></Image>
-          <Text
+            <Image
+              source={require("../Screen/image/facebook1.png")}
+              style={{
+                height: 36,
+                width: 36,
+                marginRight: 8,
+              }}
+              resizeMode="contain"
+            />
+
+            <Text>Facebook</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => console.log("Pressed")}
             style={{
-              color: "#fff",
-              marginLeft: 10,
-              fontSize: 15,
-              fontWeight: "600",
-              marginTop: 17,
+              flex: 1,
+              marginTop: 10,
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "row",
+              height: 52,
+              borderWidth: 1,
+              borderColor: COLORS.grey,
+              marginRight: 4,
+              borderRadius: 10,
+              marginRight: 30,
             }}
           >
-            Pham Thanh Dao
-          </Text>
+            <Image
+              source={require("../Screen/image/google.png")}
+              style={{
+                height: 36,
+                width: 36,
+                marginRight: 8,
+              }}
+              resizeMode="contain"
+            />
+
+            <Text>Google</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>
