@@ -8,9 +8,10 @@ import {
 } from "react-native";
 import React from "react";
 import Header from "../common/Header";
+import COLORS from "../constants/colors";
 const Contact = () => {
   return (
-    <ScrollView>
+    <View>
       <Header title={"Contact"} />
       <View>
         <Image
@@ -69,22 +70,24 @@ const Contact = () => {
               }}
             ></Image>
           </View>
-
-          <Text
-            style={{
-              fontSize: 12,
-              fontWeight: "400",
-              letterSpacing: 1,
-              opacity: 0.5,
-              lineHeight: 20,
-              maxWidth: "100%",
-              maxHeight: 44,
-              marginBottom: 0,
-            }}
-          >
-            Khi Bạn Gặp Bất Cứ Sự Cố gì hãy liên hệ với Chúng tôi Qua các phương
-            thức bên dưới
-          </Text>
+          //sửa
+          <View>
+            <Text
+              style={{
+                fontSize: 12,
+                fontWeight: "400",
+                letterSpacing: 1,
+                opacity: 0.5,
+                lineHeight: 20,
+                maxWidth: "100%",
+                maxHeight: 44,
+                marginBottom: 0,
+              }}
+            >
+              Khi Bạn Gặp Bất Cứ Sự Cố gì hãy liên hệ với Chúng tôi Qua các
+              phương thức bên dưới
+            </Text>
+          </View>
           <View
             style={{
               padding: 10,
@@ -208,7 +211,6 @@ const Contact = () => {
               style={{ width: 12, height: 12 }}
             ></Image>
           </View>
-
           <View
             style={{
               paddingHorizontal: 16,
@@ -297,7 +299,7 @@ const Contact = () => {
           </TouchableOpacity>
         </View>
       </View>
-    </ScrollView>
+    </View>
   );
 };
 export default Contact;

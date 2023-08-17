@@ -161,7 +161,6 @@ const DetailProduct = (props) => {
               </Text>
               <View
                 style={{
-                    
                   width: 310,
                   flexDirection: "row",
                   justifyContent: "space-between",
@@ -170,7 +169,7 @@ const DetailProduct = (props) => {
                 {item.sale <= 0 ? (
                   <Text
                     style={{
-                        marginLeft:10,
+                      marginLeft: 10,
                       fontSize: 16,
                       fontWeight: "600",
                       color: "red",
@@ -205,7 +204,7 @@ const DetailProduct = (props) => {
                         fontSize: 15,
                         fontWeight: "600",
                         color: "#B22222",
-                        marginLeft:5
+                        marginLeft: 5,
                       }}
                     >
                       {price(
@@ -705,30 +704,36 @@ const DetailProduct = (props) => {
             </TouchableOpacity>
             <View
               style={{
-                
-                marginStart:5,
+                marginStart: 5,
                 width: "90%",
                 height: xemChiTiet ? "auto" : 0,
-                
               }}
             >
-              <Text style={{fontWeight:"bold"}}>
+              <Text style={{ fontWeight: "bold" }}>
                 Tên mẫu áo: {detailProduct ? detailProduct.tenSp : ""}
               </Text>
-              <Text style={{fontWeight:"bold"}}>
+              <Text style={{ fontWeight: "bold" }}>
                 Hãng sản xuất: {detailProduct ? detailProduct.hangSx : ""}
               </Text>
-              <Text style={{fontWeight:"bold"}}>
+              <Text style={{ fontWeight: "bold" }}>
                 Danh mục:{" "}
                 {getCategory(detailProduct ? detailProduct.idDanhSach : "")}
               </Text>
-              <Text style={{fontWeight:"bold"}}>Số lượng: {detailProduct.soLuong}</Text>
-              <Text style={{fontWeight:"bold"}}>Giá gốc: {price(detailProduct.giaSanPham)}</Text>
-              <Text style={{fontWeight:"bold"}}>Sale: {detailProduct.sale}%</Text>
-              <RenderHtml style={{}} contentWidth={width} source={source} ></RenderHtml>
+              <Text style={{ fontWeight: "bold" }}>
+                Số lượng: {detailProduct.soLuong}
+              </Text>
+              <Text style={{ fontWeight: "bold" }}>
+                Giá gốc: {price(detailProduct.giaSanPham)}
+              </Text>
+              <Text style={{ fontWeight: "bold" }}>
+                Sale: {detailProduct.sale}%
+              </Text>
+              <RenderHtml
+                style={{}}
+                contentWidth={width}
+                source={source}
+              ></RenderHtml>
             </View>
-           
-            
           </View>
 
           <View
@@ -766,8 +771,9 @@ const styles = StyleSheet.create({
   wrap: {
     marginTop: 0,
     width: WIDTH,
-    height: HEIGHT * 0.5,
+    height: HEIGHT * 0.4,
     borderRadius: 5,
+    resizeMode: "contain",
   },
   wrapDot: {
     position: "absolute",

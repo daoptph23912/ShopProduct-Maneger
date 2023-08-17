@@ -104,10 +104,10 @@ const Main = (props) => {
           }}
           key={item.id}
           style={{
-            padding: 10,
-            borderWidth: 1,
+            padding: 5,
+            borderWidth: 0.5,
             marginLeft: 9,
-            borderRadius: 20,
+            borderRadius: 15,
           }}
         >
           <Text style={{ color: "#000" }}>{item.name}</Text>
@@ -131,7 +131,7 @@ const Main = (props) => {
         nestedScrollEnabled={true}
         style={{ flex: 0, marginBottom: 10 }}
       >
-        <View style={{ flex: 1, marginBottom: 20 }}>
+        <View style={{ flex: 1, marginBottom: 0 }}>
           <Swiper style={styles.wrapper} autoplay>
             <View style={styles.slide}>
               <Image
@@ -165,12 +165,13 @@ const Main = (props) => {
           <ScrollView
             horizontal={true}
             showsHorizontalScrollIndicator={false}
-            style={{ marginTop: 20 }}
+            style={{ marginTop: 10 }}
           >
             {litProducts()}
           </ScrollView>
+
           {hotSale && (
-            <View style={{ marginTop: 20 }}>
+            <View style={{ marginTop: 4 }}>
               <View
                 style={{
                   flexDirection: "row",
@@ -294,7 +295,7 @@ const Main = (props) => {
             </View>
           )}
 
-          <ScrollView style={{ marginTop: 20 }}>
+          <ScrollView style={{ marginTop: 10 }}>
             {categoryList.map((item, index) => {
               return (
                 <View key={index}>
@@ -351,7 +352,9 @@ const Main = (props) => {
 };
 const styles = StyleSheet.create({
   wrapper: {
+    resizeMode: "contain",
     height: 200,
+    marginTop: 5,
   },
   slide: {
     flex: 0,
