@@ -1,4 +1,4 @@
-export const URL = "http://192.168.1.91:3000";
+export const URL = "http://192.168.0.103:3000";
 
 export const LOGIN = URL + "/api/login-member";
 export const ADDMENBER = URL + "/api/add-member";

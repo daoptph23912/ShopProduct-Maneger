@@ -102,22 +102,22 @@ const CartItem = (props) => {
     setSoLuong(count);
     props.updateCart(id, count, size);
   };
-  const sizeM = (id) => {
-    setSize("M");
+  const size16gb = (id) => {
+    setSize("16gb");
 
-    props.updateCart(id, soLuong, "M");
+    props.updateCart(id, soLuong, "16gb");
   };
-  const sizeL = (id) => {
-    setSize("L");
-    props.updateCart(id, soLuong, "L");
+  const size32gb = (id) => {
+    setSize("32gb");
+    props.updateCart(id, soLuong, "32gb");
   };
-  const sizeXL = (id) => {
-    setSize("XL");
-    props.updateCart(id, soLuong, "XL");
+  const size64gb = (id) => {
+    setSize("64gb");
+    props.updateCart(id, soLuong, "64gb");
   };
-  const sizeXXL = (id) => {
-    setSize("XXL");
-    props.updateCart(id, soLuong, "XXL");
+  const size128gb = (id) => {
+    setSize("128gb");
+    props.updateCart(id, soLuong, "128gb");
   };
   handleDetailProduct = (id) => {
     navigation.navigate("Chi tiết sản phẩm", { id: id });
@@ -156,6 +156,7 @@ const CartItem = (props) => {
           <Image
             source={{ uri: showImage(itemProduct.image) }}
             style={{
+              resizeMode: "contain",
               width: 250,
               height: 200,
               borderTopLeftRadius: 10,
@@ -298,47 +299,47 @@ const CartItem = (props) => {
           <View style={{ flexDirection: "row" }}>
             <Pressable
               onPress={() => {
-                sizeM(props.item1.id);
+                size16gb(props.item1.id);
               }}
               style={[
                 styles.size,
-                { backgroundColor: size == "M" ? "#ccc" : "#fff" },
+                { backgroundColor: size == "16gb" ? "#ccc" : "#fff" },
               ]}
             >
-              <Text style={styles.textSize}>M</Text>
+              <Text style={styles.textSize}>16gb</Text>
             </Pressable>
             <Pressable
               onPress={() => {
-                sizeL(props.item1.id);
+                size32gb(props.item1.id);
               }}
               style={[
                 styles.size,
-                { backgroundColor: size == "L" ? "#ccc" : "#fff" },
+                { backgroundColor: size == "32gb" ? "#ccc" : "#fff" },
               ]}
             >
-              <Text style={styles.textSize}>L</Text>
+              <Text style={styles.textSize}>32gb</Text>
             </Pressable>
             <Pressable
               onPress={() => {
-                sizeXL(props.item1.id);
+                size64gb(props.item1.id);
               }}
               style={[
                 styles.size,
-                { backgroundColor: size == "XL" ? "#ccc" : "#fff" },
+                { backgroundColor: size == "64gb" ? "#ccc" : "#fff" },
               ]}
             >
-              <Text style={styles.textSize}>XL</Text>
+              <Text style={styles.textSize}>64gb</Text>
             </Pressable>
             <Pressable
               onPress={() => {
-                sizeXXL(props.item1.id);
+                size128gb(props.item1.id);
               }}
               style={[
                 styles.size,
-                { backgroundColor: size == "XXL" ? "#ccc" : "#fff" },
+                { backgroundColor: size == "128gb" ? "#ccc" : "#fff" },
               ]}
             >
-              <Text style={styles.textSize}>XXL</Text>
+              <Text style={styles.textSize}>128gb</Text>
             </Pressable>
           </View>
         </View>

@@ -66,12 +66,12 @@ const MyProductItem = (props) => {
         handleDetailProduct(item.id);
       }}
       style={{
-        width: 200,
+        width: 250,
         height: "auto",
         borderRadius: 10,
         elevation: 5,
         backgroundColor: "#fff",
-        marginLeft: 20,
+        marginLeft: 10,
         marginBottom: 10,
       }}
     >
@@ -84,8 +84,8 @@ const MyProductItem = (props) => {
         <Image
           source={{ uri: showImage(item.image) }}
           style={{
-            width: 180,
-            height: 180,
+            width: 200,
+            height: 200,
             resizeMode: "contain",
             borderTopLeftRadius: 10,
             borderTopRightRadius: 10,
@@ -97,11 +97,10 @@ const MyProductItem = (props) => {
 
       <Text
         style={{
-          marginLeft: 0,
-          marginTop: 2,
-          fontSize: 15,
+          marginLeft: 10,
+          marginTop: 8,
+          fontSize: 16,
           fontWeight: "600",
-          textAlign: "center",
         }}
       >
         {item.tenSp}
@@ -120,9 +119,6 @@ const MyProductItem = (props) => {
               fontSize: 18,
               fontWeight: "600",
               color: "red",
-              marginTop: 2,
-              marginBottom: 9,
-              textAlign: "center",
             }}
           >
             {price(item.giaSanPham)}

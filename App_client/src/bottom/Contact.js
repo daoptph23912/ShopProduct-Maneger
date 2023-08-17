@@ -8,14 +8,13 @@ import {
 } from "react-native";
 import React from "react";
 import Header from "../common/Header";
-import COLORS from "../constants/colors";
 const Contact = () => {
   return (
-    <View>
+    <ScrollView>
       <Header title={"Contact"} />
       <View>
         <Image
-          source={require("../../image_shopmobie/banner/banner1.jpg")}
+          source={require("../Screen/image/shop.jpg")}
           style={{
             width: "94%",
             height: 200,
@@ -37,7 +36,12 @@ const Contact = () => {
               alignItems: "center",
             }}
           >
-            s{" "}
+            {/* <Image source={require('../Screen/image/shopping.png')} style={{ width: 24, height: 24 }}></Image>
+                        <Text style={{
+                            fontSize: 16,
+                            fontWeight: '400',
+                            marginLeft: 20
+                        }}>Shopping Fashion Men</Text> */}
           </View>
           <View
             style={{
@@ -70,24 +74,22 @@ const Contact = () => {
               }}
             ></Image>
           </View>
-          //sửa
-          <View>
-            <Text
-              style={{
-                fontSize: 12,
-                fontWeight: "400",
-                letterSpacing: 1,
-                opacity: 0.5,
-                lineHeight: 20,
-                maxWidth: "100%",
-                maxHeight: 44,
-                marginBottom: 0,
-              }}
-            >
-              Khi Bạn Gặp Bất Cứ Sự Cố gì hãy liên hệ với Chúng tôi Qua các
-              phương thức bên dưới
-            </Text>
-          </View>
+
+          <Text
+            style={{
+              fontSize: 12,
+              fontWeight: "400",
+              letterSpacing: 1,
+              opacity: 0.5,
+              lineHeight: 20,
+              maxWidth: "85%",
+              maxHeight: 44,
+              marginBottom: 0,
+            }}
+          >
+            Khi Bạn Gặp Bất Cứ Sự Cố gì hãy liên hệ với Chúng tôi Qua các phương
+            thức bên dưới
+          </Text>
           <View
             style={{
               padding: 10,
@@ -211,6 +213,7 @@ const Contact = () => {
               style={{ width: 12, height: 12 }}
             ></Image>
           </View>
+
           <View
             style={{
               paddingHorizontal: 16,
@@ -239,67 +242,40 @@ const Contact = () => {
           marginBottom: 100,
         }}
       >
-        <View style={{ flexDirection: "row", justifyContent: "center" }}>
-          <TouchableOpacity
-            onPress={() => console.log("Pressed")}
+        <View style={{ flex: 1, flexDirection: "row" }}>
+          <Image
+            source={require("../Screen/image/fb.png")}
+            style={{ width: 50, height: 50 }}
+          ></Image>
+          <Text
             style={{
-              flex: 1,
-              marginTop: 10,
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "row",
-              height: 52,
-              borderWidth: 1,
-              borderColor: COLORS.grey,
-              marginRight: 4,
-              borderRadius: 10,
-              marginLeft: 30,
+              color: "#fff",
+              marginLeft: 10,
+              fontSize: 15,
+              fontWeight: "600",
+              marginTop: 17,
             }}
           >
-            <Image
-              source={require("../Screen/image/facebook1.png")}
-              style={{
-                height: 36,
-                width: 36,
-                marginRight: 8,
-              }}
-              resizeMode="contain"
-            />
-
-            <Text>Facebook</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            onPress={() => console.log("Pressed")}
+            Fashion Men
+          </Text>
+          <Image
+            source={require("../Screen/image/instagram.png")}
+            style={{ width: 50, height: 50, marginLeft: 40 }}
+          ></Image>
+          <Text
             style={{
-              flex: 1,
-              marginTop: 10,
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "row",
-              height: 52,
-              borderWidth: 1,
-              borderColor: COLORS.grey,
-              marginRight: 4,
-              borderRadius: 10,
-              marginRight: 30,
+              color: "#fff",
+              marginLeft: 10,
+              fontSize: 15,
+              fontWeight: "600",
+              marginTop: 17,
             }}
           >
-            <Image
-              source={require("../Screen/image/google.png")}
-              style={{
-                height: 36,
-                width: 36,
-                marginRight: 8,
-              }}
-              resizeMode="contain"
-            />
-
-            <Text>Google</Text>
-          </TouchableOpacity>
+            Pham Thanh Dao
+          </Text>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 export default Contact;

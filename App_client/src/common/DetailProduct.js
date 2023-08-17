@@ -406,17 +406,17 @@ const DetailProduct = (props) => {
                   fontSize: 17,
                 }}
               >
-                Chọn Size{" "}
+                Chọn Dung Lượng{" "}
               </Text>
               <View
                 style={{ flexDirection: "row", paddingLeft: 5, marginTop: 10 }}
               >
                 <TouchableOpacity
                   onPress={() => {
-                    setSize("M");
+                    setSize("16gb");
                   }}
                   style={{
-                    backgroundColor: size == "M" ? "#FF6633" : "#fff",
+                    backgroundColor: size == "16gb" ? "#FF6633" : "#fff",
                     marginRight: 20,
                     borderWidth: 1,
                     borderRadius: 5,
@@ -426,14 +426,14 @@ const DetailProduct = (props) => {
                     alignItems: "center",
                   }}
                 >
-                  <Text style={{ textAlign: "center" }}>Size: M</Text>
+                  <Text style={{ textAlign: "center" }}>16gb</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   onPress={() => {
-                    setSize("L");
+                    setSize("32gb");
                   }}
                   style={{
-                    backgroundColor: size == "L" ? "#FF6633" : "#fff",
+                    backgroundColor: size == "32gb" ? "#FF6633" : "#fff",
                     marginRight: 20,
                     borderWidth: 1,
                     borderRadius: 5,
@@ -443,14 +443,14 @@ const DetailProduct = (props) => {
                     alignItems: "center",
                   }}
                 >
-                  <Text style={{ textAlign: "center" }}>Size: L</Text>
+                  <Text style={{ textAlign: "center" }}>32gb</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   onPress={() => {
-                    setSize("XL");
+                    setSize("64gb");
                   }}
                   style={{
-                    backgroundColor: size == "XL" ? "#FF6633" : "#fff",
+                    backgroundColor: size == "64gb" ? "#FF6633" : "#fff",
                     marginRight: 20,
                     borderWidth: 1,
                     borderRadius: 5,
@@ -460,14 +460,14 @@ const DetailProduct = (props) => {
                     alignItems: "center",
                   }}
                 >
-                  <Text style={{ textAlign: "center" }}>Size: XL</Text>
+                  <Text style={{ textAlign: "center" }}>64gb</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   onPress={() => {
-                    setSize("XXL");
+                    setSize("128gb");
                   }}
                   style={{
-                    backgroundColor: size == "XXL" ? "#FF6633" : "#fff",
+                    backgroundColor: size == "128gb" ? "#FF6633" : "#fff",
                     marginRight: 20,
                     borderWidth: 1,
                     borderRadius: 5,
@@ -477,7 +477,7 @@ const DetailProduct = (props) => {
                     alignItems: "center",
                   }}
                 >
-                  <Text style={{ textAlign: "center" }}>Size: XXL</Text>
+                  <Text style={{ textAlign: "center" }}>128gb</Text>
                 </TouchableOpacity>
               </View>
             </View>

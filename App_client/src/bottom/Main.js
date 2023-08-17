@@ -132,7 +132,7 @@ const Main = (props) => {
         style={{ flex: 0, marginBottom: 10 }}
       >
         <View style={{ flex: 1, marginBottom: 0 }}>
-          <Swiper style={styles.wrapper} autoplay>
+          <Swiper style={styles.wrapper} autoplay={false}>
             <View style={styles.slide}>
               <Image
                 source={require("../../image_shopmobie/banner/banner2.jpg")}
@@ -217,7 +217,7 @@ const Main = (props) => {
                 ScrollView
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
-                style={{ marginTop: 20 }}
+                style={{ marginTop: 20, resizeMode: "contain" }}
               >
                 {hotSale &&
                   hotSale.map((item) => {
