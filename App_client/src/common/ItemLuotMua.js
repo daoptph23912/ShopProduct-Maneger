@@ -166,28 +166,8 @@ const ItemLuotMua = (props) => {
             </Text>
           </View>
         )}
-        {/* <View>
-          <Text
-            style={{
-              fontSize: 14,
-              fontWeight: "700",
-              justifyContent: "flex-end",
-              alignItems: "center",
-              flexDirection: "row",
-            }}
-          >
-            Đã bán: {item.luotMua}
-          </Text>
-        </View> */}
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "flex-end",
-            alignItems: "center",
-            marginRight: 3,
-          }}
-        >
-          <Text style={{ fontSize: 13, fontWeight: "700", color: "#3399FF" }}>
+        <View style={{}}>
+          <Text style={{ fontSize: 13, color: "red", textAlign: "center" }}>
             Đã bán:{item.luotMua}
           </Text>
         </View>

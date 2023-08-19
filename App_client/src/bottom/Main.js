@@ -205,7 +205,7 @@ const Main = (props) => {
                       fontWeight: "600",
                       textDecorationLine: "underline",
                       fontStyle: "italic",
-                      color: "blue",
+                      color: "#3399FF",
                     }}
                   >
                     Xem tất cả
@@ -267,7 +267,7 @@ const Main = (props) => {
                       fontWeight: "600",
                       textDecorationLine: "underline",
                       fontStyle: "italic",
-                      color: "blue",
+                      color: "#3399FF",
                     }}
                   >
                     Xem tất cả
@@ -332,7 +332,7 @@ const Main = (props) => {
                           fontWeight: "600",
                           textDecorationLine: "underline",
                           fontStyle: "italic",
-                          color: "blue",
+                          color: "#3399FF",
                         }}
                       >
                         Xem tất cả
