@@ -187,7 +187,7 @@ const ItemLuotMua = (props) => {
             marginRight: 3,
           }}
         >
-          <Text style={{ fontSize: 13, fontWeight: "700" }}>
+          <Text style={{ fontSize: 13, fontWeight: "700", color: "#3399FF" }}>
             Đã bán:{item.luotMua}
           </Text>
         </View>

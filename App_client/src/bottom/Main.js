@@ -201,11 +201,11 @@ const Main = (props) => {
                 >
                   <Text
                     style={{
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: "600",
                       textDecorationLine: "underline",
                       fontStyle: "italic",
-                      color: "#3399FF",
+                      color: "blue",
                     }}
                   >
                     Xem tất cả
@@ -263,11 +263,11 @@ const Main = (props) => {
                 >
                   <Text
                     style={{
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: "600",
                       textDecorationLine: "underline",
                       fontStyle: "italic",
-                      color: "#3399FF",
+                      color: "blue",
                     }}
                   >
                     Xem tất cả
@@ -328,11 +328,11 @@ const Main = (props) => {
                     >
                       <Text
                         style={{
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: "600",
                           textDecorationLine: "underline",
                           fontStyle: "italic",
-                          color: "#3399FF",
+                          color: "blue",
                         }}
                       >
                         Xem tất cả

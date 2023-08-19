@@ -260,9 +260,11 @@ const DetailProduct = (props) => {
               console.log(err);
             });
         } else {
-          return Alert.alert("Thông báo", "bạn chưa chọn số lượng hoặc size", [
-            { text: "OK", onPress: () => {} },
-          ]);
+          return Alert.alert(
+            "Thông báo",
+            "bạn chưa chọn số lượng hoặc dung lượng",
+            [{ text: "OK", onPress: () => {} }]
+          );
         }
       }
     } else {
