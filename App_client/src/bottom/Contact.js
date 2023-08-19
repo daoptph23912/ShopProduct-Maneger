@@ -14,7 +14,7 @@ const Contact = () => {
       <Header title={"Contact"} />
       <View>
         <Image
-          source={require("../Screen/image/shop.jpg")}
+          source={require("../../image_shopmobie/banner/banner4.jpg")}
           style={{
             width: "94%",
             height: 200,
@@ -35,14 +35,7 @@ const Contact = () => {
               flexDirection: "row",
               alignItems: "center",
             }}
-          >
-            {/* <Image source={require('../Screen/image/shopping.png')} style={{ width: 24, height: 24 }}></Image>
-                        <Text style={{
-                            fontSize: 16,
-                            fontWeight: '400',
-                            marginLeft: 20
-                        }}>Shopping Fashion Men</Text> */}
-          </View>
+          ></View>
           <View
             style={{
               flexDirection: "row",

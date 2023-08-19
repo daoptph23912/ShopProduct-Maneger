@@ -169,9 +169,9 @@ const Main = (props) => {
           >
             {litProducts()}
           </ScrollView>
-
+          <ScrollView></ScrollView>
           {hotSale && (
-            <View style={{ marginTop: 4 }}>
+            <View style={{ marginTop: 6 }}>
               <View
                 style={{
                   flexDirection: "row",

@@ -222,7 +222,7 @@ const Cart = (props) => {
           flexDirection: "row",
           marginLeft: 10,
           marginRight: 10,
-          marginTop: 20,
+          marginTop: 7,
           borderRadius: 5,
           padding: 10,
           justifyContent: "space-between",
@@ -259,7 +259,7 @@ const Cart = (props) => {
             style={{
               borderColor: "#000",
               borderWidth: 1,
-              height: 50,
+              height: 40,
               width: 130,
               justifyContent: "center",
               alignItems: "center",
@@ -280,7 +280,7 @@ const Cart = (props) => {
           </Pressable>
         </View>
       </View>
-      <View style={{ height: 80 }}></View>
+      <View style={{ height: 60 }}></View>
     </View>
   );
 };

@@ -1,5 +1,5 @@
 import { View, Text, Alert, Image, TouchableOpacity } from "react-native";
-import { Avatar } from "react-native-paper";
+// import { Avatar } from "react-native-paper";
 import React, { useEffect } from "react";
 import axios from "axios";
 import { GETCARTUSER, POSTCARTUSER } from "../../api";
@@ -36,12 +36,20 @@ const MyProductItem = (props) => {
         let data = {
           idUser: id,
           idSP: item.id,
-          size: "M",
+          size: "32gb",
           soLuong: 1,
         };
         await axios.post(POSTCARTUSER, data).then((res) => {
           if (res.data.errCode === 0) {
-            props.addCart();
+            Alert.alert("Thông báo", "Đơn hàng đã được thêm vào giỏ hàng", [
+              {
+                text: "OK",
+                onPress: () => {
+                  props.addCart();
+                },
+              },
+            ]);
+            // props.addCart();
           }
         });
       } else {
@@ -66,7 +74,7 @@ const MyProductItem = (props) => {
         handleDetailProduct(item.id);
       }}
       style={{
-        width: 250,
+        width: 200,
         height: "auto",
         borderRadius: 10,
         elevation: 5,
@@ -84,41 +92,45 @@ const MyProductItem = (props) => {
         <Image
           source={{ uri: showImage(item.image) }}
           style={{
-            width: 200,
-            height: 200,
+            width: 180,
+            height: 180,
             resizeMode: "contain",
             borderTopLeftRadius: 10,
             borderTopRightRadius: 10,
             justifyContent: "center",
             alignItems: "center",
+            marginTop: 3,
           }}
         />
       </View>
 
       <Text
         style={{
-          marginLeft: 10,
+          marginLeft: 0,
           marginTop: 8,
-          fontSize: 16,
+          fontSize: 15,
           fontWeight: "600",
+          textAlign: "center",
         }}
       >
         {item.tenSp}
       </Text>
       <View
         style={{
-          paddingLeft: 10,
-          paddingRight: 10,
+          paddingLeft: 0,
+          paddingRight: 0,
           marginTop: 5,
           marginBottom: 10,
+          textAlign: "center",
         }}
       >
         {item.sale <= 0 ? (
           <Text
             style={{
-              fontSize: 18,
+              fontSize: 15,
               fontWeight: "600",
               color: "red",
+              textAlign: "center",
             }}
           >
             {price(item.giaSanPham)}
@@ -126,42 +138,43 @@ const MyProductItem = (props) => {
         ) : (
           <View
             style={{
-              flexDirection: "row",
-
-              alignItems: "center",
+              flexDirection: "",
+              textAlign: "center",
             }}
           >
             <Text
               style={{
-                fontSize: 17,
+                fontSize: 14,
                 fontWeight: "600",
                 color: "red",
+                textAlign: "center",
               }}
             >
               {price(item.giaSanPham - item.giaSanPham * (item.sale / 100))}
             </Text>
-            <Text
+            {/* <Text
               style={{
-                fontSize: 25,
-                marginLeft: 10,
-                marginRight: 10,
+                fontSize: 10,
+                marginLeft: 2,
+                marginRight: 2,
+                textAlign: "center",
               }}
             >
               -
-            </Text>
+            </Text> */}
             <Text
               style={{
-                fontSize: 15,
+                fontSize: 13,
                 fontWeight: "600",
                 color: "#696969",
                 textDecorationLine: "line-through",
+                textAlign: "center",
               }}
             >
               {price(item.giaSanPham)}
             </Text>
           </View>
         )}
-
         <TouchableOpacity
           style={{
             borderWidth: 1,
@@ -183,7 +196,6 @@ const MyProductItem = (props) => {
         <View
           style={{
             borderRadius: 20,
-
             position: "absolute",
             top: -5,
             right: 25,

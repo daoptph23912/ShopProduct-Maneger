@@ -146,7 +146,7 @@ const DetailProduct = (props) => {
           >
             <Image
               source={{ uri: showImage(item.image) }}
-              style={{ width: 120, height: 120 }}
+              style={{ width: 120, height: 120, backgroundColor: "grey" }}
             />
             <View style={{}}>
               <Text
@@ -283,10 +283,8 @@ const DetailProduct = (props) => {
                 width: 400,
                 height: "auto",
                 borderRadius: 5,
-
                 paddingTop: 10,
                 paddingBottom: 10,
-
                 marginTop: 3,
               }}
             >
@@ -710,7 +708,7 @@ const DetailProduct = (props) => {
               }}
             >
               <Text style={{ fontWeight: "bold" }}>
-                Tên mẫu áo: {detailProduct ? detailProduct.tenSp : ""}
+                Tên máy : {detailProduct ? detailProduct.tenSp : ""}
               </Text>
               <Text style={{ fontWeight: "bold" }}>
                 Hãng sản xuất: {detailProduct ? detailProduct.hangSx : ""}
