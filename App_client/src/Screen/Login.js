@@ -5,6 +5,8 @@ import Button from "../components/Button";
 import Checkbox from "expo-checkbox";
 import COLORS from "../constants/colors";
 import { LinearGradient } from "expo-linear-gradient";
+// import * as GoogleSignIn from "expo-google-sign-in";
+import * as Facebook from "expo-facebook";
 import {
   Image,
   Text,
@@ -80,6 +82,36 @@ const Login = () => {
     } else {
       setErrMessage("Email và password không được để trống");
       setErr(true);
+    }
+  };
+  const handleGoogleLogin = async () => {
+    try {
+      await GoogleSignIn.askForPlayServicesAsync();
+      const { type, user } = await GoogleSignIn.signInAsync();
+
+      if (type === "success") {
+        console.log("Logged in with Google:", user);
+      }
+    } catch (error) {
+      console.error("Google login error:", error);
+    }
+  };
+
+  const handleFacebookLogin = async () => {
+    try {
+      await Facebook.initializeAsync({
+        appId: "YOUR_FACEBOOK_APP_ID",
+      });
+
+      const { type, token } = await Facebook.logInWithReadPermissionsAsync({
+        permissions: ["public_profile", "email"],
+      });
+
+      if (type === "success") {
+        console.log("Logged in with Facebook:", token);
+      }
+    } catch (error) {
+      console.error("Facebook login error:", error);
     }
   };
 
@@ -211,7 +243,7 @@ const Login = () => {
 
       <View style={{ flexDirection: "row", justifyContent: "center" }}>
         <TouchableOpacity
-          onPress={() => console.log("Pressed")}
+          onPress={handleFacebookLogin}
           style={{
             flex: 1,
             marginTop: 10,
@@ -240,7 +272,7 @@ const Login = () => {
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={() => console.log("Pressed")}
+          onPress={handleGoogleLogin}
           style={{
             flex: 1,
             marginTop: 10,

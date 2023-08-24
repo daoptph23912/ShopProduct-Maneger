@@ -104,13 +104,14 @@ const Main = (props) => {
           }}
           key={item.id}
           style={{
-            padding: 5,
+            padding: 7,
             borderWidth: 0.5,
             marginLeft: 9,
-            borderRadius: 15,
+            borderRadius: 10,
+            backgroundColor: "white",
           }}
         >
-          <Text style={{ color: "#000" }}>{item.name}</Text>
+          <Text style={{ color: "black", fontSize: 14 }}>{item.name}</Text>
         </TouchableOpacity>
       );
     });

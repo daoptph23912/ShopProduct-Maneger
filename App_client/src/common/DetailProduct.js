@@ -146,7 +146,11 @@ const DetailProduct = (props) => {
           >
             <Image
               source={{ uri: showImage(item.image) }}
-              style={{ width: 120, height: 120, backgroundColor: "grey" }}
+              style={{
+                width: 120,
+                height: 120,
+                resizeMode: "contain",
+              }}
             />
             <View style={{}}>
               <Text
@@ -400,16 +404,17 @@ const DetailProduct = (props) => {
               <Text
                 style={{
                   fontWeight: "bold",
-                  borderColor: "grey",
                   backgroundColor: "grey",
                   padding: 10,
-                  fontSize: 17,
+                  fontSize: 15,
+                  color: "white",
+                  textAlign: "center",
                 }}
               >
                 Chọn Dung Lượng{" "}
               </Text>
               <View
-                style={{ flexDirection: "row", paddingLeft: 5, marginTop: 10 }}
+                style={{ flexDirection: "row", paddingLeft: 10, marginTop: 10 }}
               >
                 <TouchableOpacity
                   onPress={() => {
@@ -485,11 +490,12 @@ const DetailProduct = (props) => {
               <Text
                 style={{
                   fontWeight: "bold",
-                  borderColor: "grey",
                   backgroundColor: "grey",
                   padding: 10,
-                  fontSize: 17,
+                  fontSize: 15,
                   marginTop: 10,
+                  color: "white",
+                  textAlign: "center",
                 }}
               >
                 Số lượng{" "}
@@ -739,9 +745,7 @@ const DetailProduct = (props) => {
           <View
             style={{
               width: "100%",
-
               borderRadius: 10,
-
               height: "auto",
             }}
           >
@@ -750,7 +754,7 @@ const DetailProduct = (props) => {
                 fontWeight: "bold",
                 borderWidth: 1,
                 textAlign: "center",
-                backgroundColor: "gray",
+                backgroundColor: "grey",
                 color: "white",
                 padding: 12,
               }}

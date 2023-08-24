@@ -84,8 +84,8 @@ const ItemLuotMua = (props) => {
         <Image
           source={{ uri: showImage(item.image) }}
           style={{
-            width: 180,
-            height: 180,
+            width: 160,
+            height: 160,
             borderTopLeftRadius: 10,
             borderTopRightRadius: 10,
             justifyContent: "center",
@@ -118,10 +118,11 @@ const ItemLuotMua = (props) => {
         {item.sale <= 0 ? (
           <Text
             style={{
-              fontSize: 15,
+              fontSize: 14,
               fontWeight: "600",
               color: "red",
               textAlign: "center",
+              marginBottom: 16,
             }}
           >
             {price(item.giaSanPham)}
@@ -130,13 +131,12 @@ const ItemLuotMua = (props) => {
           <View
             style={{
               flexDirection: "",
-
               alignItems: "center",
             }}
           >
             <Text
               style={{
-                fontSize: 15,
+                fontSize: 14,
                 fontWeight: "600",
                 color: "red",
                 textAlign: "left",
@@ -144,16 +144,6 @@ const ItemLuotMua = (props) => {
             >
               {price(item.giaSanPham - item.giaSanPham * (item.sale / 100))}
             </Text>
-            {/* <Text
-              style={{
-                fontSize: 10,
-                marginLeft: 2,
-                marginRight: 2,
-              }}
-            >
-              -
-            </Text> */}
-
             <Text
               style={{
                 fontSize: 13,
@@ -174,13 +164,13 @@ const ItemLuotMua = (props) => {
 
         <TouchableOpacity
           style={{
+            borderRadius: 20,
             borderWidth: 1,
-            borderRadius: 10,
-            paddingLeft: 10,
-            paddingRight: 10,
-            marginTop: 10,
-            paddingBottom: 10,
-            paddingTop: 7,
+            padding: 6,
+            marginTop: 6,
+            marginLeft: 25,
+            marginRight: 25,
+            backgroundColor: "#EEEEEE",
           }}
           onPress={() => {
             onAddToCart(item);
