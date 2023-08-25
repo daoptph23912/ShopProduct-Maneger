@@ -130,7 +130,7 @@ const Main = (props) => {
           />
         }
         nestedScrollEnabled={true}
-        style={{ flex: 0, marginBottom: 10 }}
+        style={{ flex: 0, marginBottom: 50 }}
       >
         <View style={{ flex: 1, marginBottom: 0 }}>
           <Swiper style={styles.wrapper} autoplay={false}>
