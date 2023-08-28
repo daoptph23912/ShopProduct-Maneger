@@ -81,6 +81,19 @@ const ItemLuotMua = (props) => {
           alignItems: "center",
         }}
       >
+        <Text
+          style={{
+            marginLeft: 0,
+            marginTop: 4,
+            marginBottom: 3,
+            fontSize: 15,
+            fontWeight: "600",
+            textAlign: "center",
+            color: "#DC1515",
+          }}
+        >
+          {item.tenSp}
+        </Text>
         <Image
           source={{ uri: showImage(item.image) }}
           style={{
@@ -95,18 +108,6 @@ const ItemLuotMua = (props) => {
           }}
         />
       </View>
-
-      <Text
-        style={{
-          marginLeft: 0,
-          marginTop: 8,
-          fontSize: 15,
-          fontWeight: "600",
-          textAlign: "center",
-        }}
-      >
-        {item.tenSp}
-      </Text>
       <View
         style={{
           paddingLeft: 0,
@@ -120,7 +121,7 @@ const ItemLuotMua = (props) => {
             style={{
               fontSize: 14,
               fontWeight: "600",
-              color: "red",
+              color: "#920606",
               textAlign: "center",
               marginBottom: 16,
             }}
@@ -138,7 +139,7 @@ const ItemLuotMua = (props) => {
               style={{
                 fontSize: 14,
                 fontWeight: "600",
-                color: "red",
+                color: "#920606",
                 textAlign: "left",
               }}
             >
@@ -157,9 +158,30 @@ const ItemLuotMua = (props) => {
           </View>
         )}
         <View style={{}}>
-          <Text style={{ fontSize: 13, color: "red", textAlign: "center" }}>
-            Đã bán:{item.luotMua}
-          </Text>
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "flex-end",
+              marginTop: 5,
+            }}
+          >
+            {Array.from({ length: item.danhGia || 5 }, (_, index) => (
+              <Image
+                key={index}
+                source={require("../../assets/sao.jpg")}
+                style={{ width: 18, height: 18, marginLeft: 2 }}
+              />
+            ))}
+            <Text
+              style={{
+                fontSize: 13,
+                color: "#6D6D1D",
+                marginLeft: 38,
+              }}
+            >
+              {item.luotMua} đã bán
+            </Text>
+          </View>
         </View>
 
         <TouchableOpacity
@@ -183,10 +205,9 @@ const ItemLuotMua = (props) => {
         <View
           style={{
             borderRadius: 20,
-
             position: "absolute",
-            top: -5,
-            right: 25,
+            top: -9,
+            right: -5,
             flex: 1,
             flexDirection: "row",
             alignItems: "center",

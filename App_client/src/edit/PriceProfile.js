@@ -152,22 +152,21 @@ const PriceProfile = () => {
       style={[styles.container, { flex: 1 }]}
       showsVerticalScrollIndicator={false}
     >
-      <View style={{ marginTop: 40 }}>
+      <View style={{ marginTop: 20, marginBottom: 20 }}>
         <View style={{ alignItems: "center" }}>
           <Text style={{ fontSize: 17, fontWeight: "600" }}>
-            Bạn hãy chuyển khoản số tiền cần nạp vào tài khoản ngân hàng dưới
-            đây
+            Chuyển tiền qua tài khoản ngân hàng
           </Text>
           <Text>MB BANK :</Text>
 
           <Image
             source={require("../Screen/image/tpBank.png")}
-            style={{ width: 300, height: 400 }}
+            style={{ width: 300, height: 400, resizeMode: "center" }}
           ></Image>
         </View>
         <View style={{ marginLeft: 10, marginTop: 10 }}>
           <Text style={{ fontSize: 17, fontWeight: "600" }}>
-            Số tiền nạp:{" "}
+            Nhập số tiền nạp dưới đây:{" "}
             <Text style={{ color: "red" }}> {tien(parseInt(price))}</Text>
           </Text>
         </View>
@@ -181,10 +180,10 @@ const PriceProfile = () => {
             },
           ]}
         >
-          <FontAwesome name="dollar" size={21} style={{}} />
+          <FontAwesome name="dollar" size={21} style={{ marginBottom: 14 }} />
           <TextInput
-            placeholder="Nhập số tiền vừa chuyển khoản"
-            placeholderTextColor="#666666"
+            placeholder="Vui lòng nhập số tiền vừa chuyển khoản"
+            placeholderTextColor="red"
             autoCorrect={false}
             keyboardType="number-pad"
             value={price.toString()}
@@ -335,7 +334,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#f2f2f2",
+    borderBottomColor: "black",
     paddingBottom: 5,
   },
   actionError: {

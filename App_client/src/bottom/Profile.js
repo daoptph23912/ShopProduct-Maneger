@@ -40,7 +40,9 @@ const Profile = () => {
     getProfile();
     getAllOrder();
   };
-
+  const editProfile = () => {
+    navigation.navigate("EditProfile");
+  };
   const singOut = () => {
     navigation.navigate("Login");
   };
@@ -111,14 +113,21 @@ const Profile = () => {
       >
         <View style={styles.userInfoSectiom}>
           <View style={{ flexDirection: "row" }}>
-            <Avatar.Image
-              source={{
-                uri: profile.anhDaiDien
-                  ? profile.anhDaiDien
-                  : "https://tse4.mm.bing.net/th?id=OIP.eImXLrEHmxuAIYAz3_VKhAHaHt&pid=Api&P=0",
+            <Pressable
+              onPress={() => {
+                editProfile();
               }}
-              size={100}
-            />
+            >
+              <Avatar.Image
+                source={{
+                  uri: profile.anhDaiDien
+                    ? profile.anhDaiDien
+                    : "https://tse4.mm.bing.net/th?id=OIP.eImXLrEHmxuAIYAz3_VKhAHaHt&pid=Api&P=0",
+                }}
+                size={100}
+              />
+            </Pressable>
+
             <View style={{ marginLeft: 20 }}>
               <View
                 style={[

@@ -89,6 +89,19 @@ const MyProductItem = (props) => {
           alignItems: "center",
         }}
       >
+        <Text
+          style={{
+            marginLeft: 0,
+            marginTop: 4,
+            marginBottom: 3,
+            fontSize: 15,
+            fontWeight: "600",
+            textAlign: "center",
+            color: "#DC1515",
+          }}
+        >
+          {item.tenSp}
+        </Text>
         <Image
           source={{ uri: showImage(item.image) }}
           style={{
@@ -104,17 +117,6 @@ const MyProductItem = (props) => {
         />
       </View>
 
-      <Text
-        style={{
-          marginLeft: 0,
-          marginTop: 8,
-          fontSize: 15,
-          fontWeight: "600",
-          textAlign: "center",
-        }}
-      >
-        {item.tenSp}
-      </Text>
       <View
         style={{
           paddingLeft: 0,
@@ -125,17 +127,44 @@ const MyProductItem = (props) => {
         }}
       >
         {item.sale <= 0 ? (
-          <Text
-            style={{
-              fontSize: 14,
-              fontWeight: "600",
-              color: "red",
-              textAlign: "center",
-              marginBottom: 16,
-            }}
-          >
-            {price(item.giaSanPham)}
-          </Text>
+          <View>
+            <Text
+              style={{
+                fontSize: 14,
+                fontWeight: "600",
+                color: "#920606",
+                textAlign: "center",
+                marginBottom: 16,
+              }}
+            >
+              {price(item.giaSanPham)}
+            </Text>
+
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "flex-end",
+                marginTop: 5,
+              }}
+            >
+              {Array.from({ length: item.danhGia || 5 }, (_, index) => (
+                <Image
+                  key={index}
+                  source={require("../../assets/sao.jpg")}
+                  style={{ width: 18, height: 18, marginLeft: 2 }}
+                />
+              ))}
+              <Text
+                style={{
+                  fontSize: 13,
+                  color: "#6D6D1D",
+                  marginLeft: 38,
+                }}
+              >
+                {item.luotMua} đã bán
+              </Text>
+            </View>
+          </View>
         ) : (
           <View
             style={{
@@ -147,7 +176,7 @@ const MyProductItem = (props) => {
               style={{
                 fontSize: 14,
                 fontWeight: "600",
-                color: "red",
+                color: "#920606",
                 textAlign: "center",
               }}
             >
@@ -165,6 +194,32 @@ const MyProductItem = (props) => {
             >
               {price(item.giaSanPham)}
             </Text>
+            <View style={{}}>
+              <View
+                style={{
+                  flexDirection: "row",
+                  alignItems: "flex-end",
+                  marginTop: 5,
+                }}
+              >
+                {Array.from({ length: item.danhGia || 5 }, (_, index) => (
+                  <Image
+                    key={index}
+                    source={require("../../assets/sao.jpg")}
+                    style={{ width: 18, height: 18, marginLeft: 2 }}
+                  />
+                ))}
+                <Text
+                  style={{
+                    fontSize: 13,
+                    color: "#6D6D1D",
+                    marginLeft: 38,
+                  }}
+                >
+                  {item.luotMua} đã bán
+                </Text>
+              </View>
+            </View>
           </View>
         )}
         <TouchableOpacity
@@ -172,7 +227,7 @@ const MyProductItem = (props) => {
             borderRadius: 20,
             borderWidth: 1,
             padding: 6,
-            marginTop: 6,
+            marginTop: 10,
             marginLeft: 25,
             marginRight: 25,
             backgroundColor: "#EEEEEE",
@@ -189,8 +244,8 @@ const MyProductItem = (props) => {
           style={{
             borderRadius: 20,
             position: "absolute",
-            top: -5,
-            right: 25,
+            top: -9,
+            right: -5,
             flex: 1,
             flexDirection: "row",
             alignItems: "center",

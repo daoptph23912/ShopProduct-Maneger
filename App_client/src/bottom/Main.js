@@ -10,7 +10,6 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import Header from "../common/Header";
-
 import MyProductItem from "../common/MyProductItem";
 import ItemLuotMua from "../common/ItemLuotMua";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,6 +17,7 @@ import Swiper from "react-native-swiper";
 import { useNavigation, useIsFocused } from "@react-navigation/native";
 import axios from "axios";
 import { GETCATEGORIES, GETALLPRODUCTS } from "../../api";
+import IconSearch from "react-native-vector-icons/FontAwesome";
 const Main = (props) => {
   const navigation = useNavigation();
   const isFocused = useIsFocused();
@@ -29,6 +29,9 @@ const Main = (props) => {
   const [hotSale, setHotSale] = useState([]);
   //const arrCategories = useSelector(state => state.Reducers.categoties);
 
+  const searchProducts = () => {
+    navigation.navigate("Tìm kiếm");
+  };
   const loadAllProducts = async () => {
     await axios
       .get(GETALLPRODUCTS)
@@ -78,7 +81,7 @@ const Main = (props) => {
 
   listDanhSach = (id) => {
     return (
-      <>
+      <View>
         <FlatList
           data={tshirtList.filter((p) => p.idDanhSach === id)}
           horizontal
@@ -89,7 +92,7 @@ const Main = (props) => {
             return <MyProductItem item={item} addCart={addCart} />;
           }}
         />
-      </>
+      </View>
     );
   };
   danhSachSabPham = (id, name) => {
@@ -118,7 +121,7 @@ const Main = (props) => {
   };
   return (
     <>
-      <Header style={{}} title={"Home"} />
+      <Header title={"Home"} />
 
       <ScrollView
         refreshControl={
@@ -170,6 +173,7 @@ const Main = (props) => {
           >
             {litProducts()}
           </ScrollView>
+
           <ScrollView></ScrollView>
           {hotSale && (
             <View style={{ marginTop: 6 }}>

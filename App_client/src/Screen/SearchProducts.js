@@ -66,13 +66,10 @@ const SearchProducts = () => {
           borderColor: "#000",
           borderWidth: 1,
           backgroundColor: "#fff",
-          marginBottom: 10,
-          marginTop: 10,
-          borderRadius: 5,
         }}
       >
         <TextInput
-          placeholder="NHập tên sản phẩm "
+          placeholder="Nhập tên sản phẩm "
           value={search}
           onChangeText={(text) => searchFilter(text)}
         />
@@ -91,15 +88,14 @@ const SearchProducts = () => {
                 <View
                   style={{
                     flexDirection: "row",
-                    marginTop: 10,
-                    padding: 5,
                     borderBottomColor: "#ccc",
                     borderBottomWidth: 0.7,
+                    marginBottom: 20,
                   }}
                 >
                   <Image
                     source={{ uri: showImage(item.image) }}
-                    style={{ width: 100, height: 100 }}
+                    style={{ width: 100, height: 100, resizeMode: "contain" }}
                   />
                   <View style={{}}>
                     <Text
